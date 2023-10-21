@@ -2,26 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+[data-theme="dark-blue"] body{
+  background-color: hsl(222, 26%, 31%);
+  color:white;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+[data-theme="light"] body{
+  background-color: hsl(0, 0%, 90%);
+  color:hsl(60, 10%, 19%);
 }
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+[data-theme="dark-violet"] body{
+  background-color: hsl(268, 75%, 9%);
+  color:hsl(52, 100%, 62%);
 }
